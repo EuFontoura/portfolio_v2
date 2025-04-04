@@ -1,7 +1,7 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
-import PictureEffect from "../layout/Picture";
+import PictureEffect from "../layout/PictureEffect";
 
 const Home = () => {
   return (
