@@ -2,28 +2,8 @@ import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import PictureEffect from "../layout/PictureEffect";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faLinkedin,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
-
-// Variants pros ícones com "puh-puh-puh"
-const iconContainer = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.25,
-    },
-  },
-};
-
-const iconItem = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
-};
+import Button from "../ui/Button";
+import Icons from "../ui/Icons";
 
 const Home = () => {
   return (
@@ -71,49 +51,16 @@ const Home = () => {
           />
         </motion.p>
 
-        <motion.div
-          variants={iconContainer}
-          initial="hidden"
-          animate="show"
-          className="flex justify-center md:justify-start gap-6 mt-6"
+        <Button
+          variant="outline"
+          className="mt-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
         >
-          <motion.a
-            variants={iconItem}
-            href="https://github.com/seuuser"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon
-              icon={faGithub}
-              size="2x"
-              className="hover:text-black transition-all duration-300"
-            />
-          </motion.a>
-          <motion.a
-            variants={iconItem}
-            href="https://linkedin.com/in/seuuser"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon
-              icon={faLinkedin}
-              size="2x"
-              className="hover:text-blue-500 transition-all duration-300"
-            />
-          </motion.a>
-          <motion.a
-            variants={iconItem}
-            href="https://instagram.com/seuuser"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon
-              icon={faInstagram}
-              size="2x"
-              className="hover:text-pink-400 transition-all duration-300"
-            />
-          </motion.a>
-        </motion.div>
+          Saiba mais
+        </Button>
+        <Icons />
       </div>
 
       <motion.div
