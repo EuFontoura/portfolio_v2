@@ -1,6 +1,7 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
+import PictureEffect from "../layout/Picture";
 
 const Home = () => {
   return (
@@ -55,11 +56,7 @@ const Home = () => {
         transition={{ delay: 1.2, duration: 0.6 }}
         className="flex-1 flex justify-center mt-10 md:mt-0"
       >
-        <img
-          src="https://placehold.co/300x300"
-          alt="Gabriel Fontoura"
-          className="w-72 h-72 rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500 ease-in-out shadow-[0_10px_20px_rgba(0,0,0,0.5)] border-4 border-blue-400"
-        />
+        <PictureEffect src="https://th.bing.com/th/id/OIP.CYVMQihQDvft4xAv03jQQwHaEJ?rs=1&pid=ImgDetMain"/>
       </motion.div>
     </section>
   );
