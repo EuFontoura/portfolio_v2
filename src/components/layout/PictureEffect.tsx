@@ -26,7 +26,7 @@ const PictureEffect = ({ src }: { src: string }) => {
 
   return (
     <div
-      className="w-72 h-72 rounded-full overflow-hidden transition-transform duration-300"
+      className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden transition-transform duration-300"
       onMouseMove={handleMouseMove}
       onMouseLeave={resetTransform}
       style={{
@@ -38,7 +38,7 @@ const PictureEffect = ({ src }: { src: string }) => {
       <img
         src={src}
         alt="foto do brabo"
-        className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-300 ease-in-out"
+        className="w-full h-full object-cover md:grayscale hover:grayscale-0 transition duration-300 ease-in-out"
       />
     </div>
   );
