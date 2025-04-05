@@ -56,11 +56,11 @@ const Home = () => {
   to="sobre"
   smooth={true}
   duration={600}
-  offset={-50} // isso aqui é pra dar uma folguinha se tiver navbar fixa
+  offset={-50}
 >
   <Button
     variant="outline"
-    className="mt-4"
+    className="mt-4 cursor-pointer"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ delay: 0.3 }}

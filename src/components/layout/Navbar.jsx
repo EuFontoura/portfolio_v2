@@ -23,7 +23,7 @@ const Navbar = () => {
               to={item.toLowerCase()}
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-60}
               duration={500}
               activeClass="font-semibold text-blue-300 after:scale-x-100"
               className="relative cursor-pointer text-xl text-white hover:text-blue-300 transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-blue-400 after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
