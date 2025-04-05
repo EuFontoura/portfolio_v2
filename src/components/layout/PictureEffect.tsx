@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const PictureEffect = ({ src }: { src: string }) => {
+interface PictureEffectProps {
+  src: string;
+  className?: string;
+}
+
+const PictureEffect = ({ src, className = "" }: PictureEffectProps) => {
   const [transformStyle, setTransformStyle] = useState({});
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -20,19 +25,19 @@ const PictureEffect = ({ src }: { src: string }) => {
 
   const resetTransform = () => {
     setTransformStyle({
-      transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)',
+      transform: "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)",
     });
   };
 
   return (
     <div
-      className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden transition-transform duration-300"
+      className={`overflow-hidden transition-transform duration-300 ${className}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={resetTransform}
       style={{
         ...transformStyle,
-        willChange: 'transform',
-        transition: 'transform 0.3s ease',
+        willChange: "transform",
+        transition: "transform 0.3s ease",
       }}
     >
       <img

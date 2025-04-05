@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import PictureEffect from "../layout/PictureEffect";
 import Button from "../ui/Button";
 import Icons from "../ui/Icons";
+import { Link } from "react-scroll";
 
 const Home = () => {
   return (
@@ -51,15 +52,22 @@ const Home = () => {
           />
         </motion.p>
 
-        <Button
-          variant="outline"
-          className="mt-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-        >
-          Saiba mais
-        </Button>
+        <Link
+  to="sobre"
+  smooth={true}
+  duration={600}
+  offset={-50} // isso aqui é pra dar uma folguinha se tiver navbar fixa
+>
+  <Button
+    variant="outline"
+    className="mt-4"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.3 }}
+  >
+    Saiba mais
+  </Button>
+</Link>
         <Icons />
       </div>
 
@@ -69,7 +77,7 @@ const Home = () => {
         transition={{ delay: 0.9, duration: 0.6 }}
         className="flex-1 flex justify-center -mt-20 md:mt-0"
       >
-        <PictureEffect src="https://th.bing.com/th/id/OIP.CYVMQihQDvft4xAv03jQQwHaEJ?rs=1&pid=ImgDetMain" />
+        <PictureEffect className="rounded-full md:w-72 md:h-72 w-56 h-56" src="https://th.bing.com/th/id/OIP.CYVMQihQDvft4xAv03jQQwHaEJ?rs=1&pid=ImgDetMain" />
       </motion.div>
     </section>
   );

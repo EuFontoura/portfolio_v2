@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { Menu, X } from "lucide-react"; // Ícones topzera
+import { Menu, X } from "lucide-react"; 
 
 const navItems = ["Home", "Sobre", "Skills", "Projetos", "Contato"];
 
@@ -12,12 +12,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <h1 className="text-xl font-bold">Gabriel Fontoura</h1>
 
-        {/* Botão hamburguer */}
         <div className="md:hidden z-50" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </div>
 
-        {/* Itens da navbar - desktop */}
         <ul className="hidden md:flex space-x-6">
           {navItems.map((item) => (
             <Link
@@ -35,7 +33,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Itens da navbar - mobile */}
         <ul
           className={`absolute top-14 left-0 w-full bg-black flex flex-col items-center gap-6 py-6 transition-all duration-300 md:hidden ${
             isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
@@ -49,7 +46,7 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              onClick={() => setIsOpen(false)} // Fecha o menu ao clicar
+              onClick={() => setIsOpen(false)}
               className="text-xl text-white hover:text-blue-300 transition-colors"
             >
               {item}
