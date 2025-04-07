@@ -4,10 +4,12 @@ import Home from "./components/sections/Home";
 import Projetos from "./components/sections/Projetos";
 import Skills from "./components/sections/Skills";
 import Sobre from "./components/sections/Sobre";
+import Contato from "./components/sections/Contato";
 
 import "./App.css";
 
 import ProjetosPage from "./pages/ProjetosPage";
+import BottomNavbar from "./components/layout/BottomNavbar";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
               <Sobre />
               <Skills />
               <Projetos />
+              <Contato />
+              <BottomNavbar />
             </>
           }
         />

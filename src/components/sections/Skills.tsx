@@ -27,7 +27,7 @@ const skills = [
   { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
   { name: "Bootstrap", icon: <SiBootstrap className="text-purple-500" /> },
   { name: "Excel", icon: <RiFileExcel2Fill className="text-green-600" /> },
-  { name: "VS Code", icon: <VscVscode className="text-blue-400" /> },
+  { name: "VSCode", icon: <VscVscode className="text-blue-400" /> },
   { name: "Figma", icon: <SiFigma className="text-pink-500" /> },
   { name: "Git", icon: <SiGit className="text-orange-600" /> },
   { name: "GitHub", icon: <SiGithub className="text-white" /> },
@@ -72,7 +72,7 @@ const Skills = () => {
               className="flex flex-col items-center p-6 w-28 h-28 sm:w-32 sm:h-32 rounded-xl shadow-md bg-blue-900 hover:brightness-125 transition-all duration-300"
               title={skill.name}
             >
-              <div className="text-5xl mb-2">{skill.icon}</div>
+              <div className="md:text-5xl text-3xl mb-2">{skill.icon}</div>
               <span className="text-white text-xl text-center pt-2">{skill.name}</span>
             </motion.div>
           ))}
