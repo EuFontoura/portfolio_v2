@@ -43,7 +43,7 @@ const PictureEffect = ({ src, className = "" }: PictureEffectProps) => {
       <img
         src={src}
         alt="foto do brabo"
-        className="w-full h-full object-cover md:grayscale hover:grayscale-0 transition duration-300 ease-in-out"
+        className="w-full h-full object-cover transition duration-300 ease-in-out"
       />
     </div>
   );

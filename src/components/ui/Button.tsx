@@ -1,4 +1,4 @@
-import React, { ReactNode, useState  } from "react";
+import React, { ReactNode, useState } from "react";
 import { motion, HTMLMotionProps } from "framer-motion";
 import clsx from "clsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +12,7 @@ interface ButtonProps extends HTMLMotionProps<"button"> {
   variant?: Variant;
   size?: Size;
   className?: string;
+  animatedIcon?: boolean; // 👈 novo prop
 }
 
 const baseStyles =
@@ -33,6 +34,7 @@ const Button = ({
   variant = "primary",
   size = "md",
   className,
+  animatedIcon = false,
   ...props
 }: ButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -46,16 +48,19 @@ const Button = ({
       {...props}
     >
       <span>{children}</span>
-      <motion.span
-        className="md:inline-block transform transition-all duration-500 opacity-0 translate-y-1 group-hover:translate-y-0 hidden"
-        animate={{
-          rotate: isHovered ? 360 : 0,
-          opacity: isHovered ? 1 : 0,
-        }}
-        transition={{ duration: 0.5 }}
-      >
-      <FontAwesomeIcon icon={faArrowDown} />
-      </motion.span>
+
+      {animatedIcon && (
+        <motion.span
+          className="md:inline-block transform transition-all duration-500 opacity-0 translate-y-1 group-hover:translate-y-0 hidden"
+          animate={{
+            rotate: isHovered ? 360 : 0,
+            opacity: isHovered ? 1 : 0,
+          }}
+          transition={{ duration: 0.5 }}
+        >
+          <FontAwesomeIcon icon={faArrowDown} />
+        </motion.span>
+      )}
     </motion.button>
   );
 };

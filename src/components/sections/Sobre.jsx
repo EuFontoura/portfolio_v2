@@ -21,7 +21,7 @@ const Sobre = () => {
   return (
     <section
       id="sobre"
-      className="pt-6 min-h-screen bg-white text-gray-800 flex flex-col items-center px-6 sm:px-12 selection:bg-gray-800 selection:text-white"
+      className="pt-6 min-h-screen bg-gray-100 text-gray-800 flex flex-col items-center px-6 sm:px-12 selection:bg-gray-800 selection:text-white"
     >
       <motion.h2
         className="text-4xl font-bold text-gray-800 mb-12 text-center font-poppins"
@@ -45,7 +45,7 @@ const Sobre = () => {
           custom={1}
         >
           <PictureEffect
-            className="w-60 h-60 md:w-80 md:h-80 rounded-md"
+            className="w-60 h-60 md:w-80 md:h-80 rounded-md md:grayscale hover:grayscale-0"
             src="https://th.bing.com/th/id/OIP.CYVMQihQDvft4xAv03jQQwHaEJ?rs=1&pid=ImgDetMain"
           />
         </motion.div>

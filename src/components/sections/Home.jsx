@@ -59,6 +59,7 @@ const Home = () => {
   offset={-50}
 >
   <Button
+    animatedIcon
     variant="outline"
     className="mt-4 cursor-pointer"
     initial={{ opacity: 0 }}
