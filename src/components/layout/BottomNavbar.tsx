@@ -49,6 +49,7 @@ const BottomNavbar = () => {
         to="contato"
         smooth={true}
         duration={500}
+        offset={-60}
         className="flex flex-col items-center text-gray-600 hover:text-blue-500 text-sm"
       >
         <Mail size={24} />
