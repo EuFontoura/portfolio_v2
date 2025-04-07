@@ -3,7 +3,7 @@ import Button from "../ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import GitImage from "../../../public/github_page.png";
+import { Link } from "react-router-dom";
 
 const Projetos = () => {
   return (
@@ -30,25 +30,25 @@ const Projetos = () => {
               Veja como é feito
             </Button>
           </a>
-          <a href="http://www.google.com">
-            <Button
-              variant="outline"
-              size="sm"
-              className="hover:text-white hover:bg-blue-600 group cursor-pointer"
-            >
-              Meus Projetos
-              <FontAwesomeIcon
-                icon={faArrowRight}
-                className="pl-2.5 transform transition-all duration-300 group-hover:translate-x-2"
-              />
-            </Button>
-          </a>
+          <Link to="/projetos">
+  <Button
+    variant="outline"
+    size="sm"
+    className="hover:text-white hover:bg-blue-600 group cursor-pointer"
+  >
+    Meus Projetos
+    <FontAwesomeIcon
+      icon={faArrowRight}
+      className="pl-2.5 transform transition-all duration-300 group-hover:translate-x-2"
+    />
+  </Button>
+</Link>
         </div>
 
         <img
-          className="w-full h-full object-cover"
+          src="/github_page.png"
           alt="Imagem Github"
-          src={GitImage}
+          className="w-full h-full object-cover"
         />
       </div>
     </section>
