@@ -69,6 +69,6 @@ Quer trocar uma ideia, chamar pra um job ou só mandar um elogio?
 
 🔗 [LinkedIn](https://linkedin.com/in/gabriel-fontoura/)
 
-🌐 [Acesse o Portfólio](gabrielfontouradev.vercel.app)
+🌐 [Acesse o Portfólio](https://gabrielfontouradev.vercel.app)
 
 Feito com 💚 por Gabriel Fontoura
