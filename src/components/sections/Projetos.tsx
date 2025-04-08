@@ -9,7 +9,7 @@ const Projetos = () => {
   return (
     <section
       id="projetos"
-      className="pt-6 min-h-screen bg-gray-100 text-black flex flex-col items-center px-6 sm:px-12"
+      className="pt-6 min-h-screen bg-gray-100 text-black flex flex-col items-center px-6 sm:px-12 selection:bg-gray-400 selection:text-black"
     >
       <h1 className="text-4xl font-bold text-gray-800 mb-12 text-center font-poppins pb-2">
         Projetos
