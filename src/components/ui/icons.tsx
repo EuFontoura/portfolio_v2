@@ -33,7 +33,7 @@ const Icons = () => {
       >
         <motion.a
           variants={iconItem}
-          href="https://github.com/seuuser"
+          href="https://github.com/EuFontoura"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -45,7 +45,7 @@ const Icons = () => {
         </motion.a>
         <motion.a
           variants={iconItem}
-          href="https://linkedin.com/in/seuuser"
+          href="https://linkedin.com/in/gabriel-fontoura/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -57,7 +57,7 @@ const Icons = () => {
         </motion.a>
         <motion.a
           variants={iconItem}
-          href="https://instagram.com/seuuser"
+          href="https://instagram.com/eu_fontoura"
           target="_blank"
           rel="noopener noreferrer"
         >
