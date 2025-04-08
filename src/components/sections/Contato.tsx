@@ -43,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contato" className="bg-black text-white px-6 py-16 min-h-screen selection:bg-gray-400 selection:text-black">
+    <section id="contato" className="bg-black text-white px-6 py-0 min-h-[38rem] selection:bg-gray-400 selection:text-black">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

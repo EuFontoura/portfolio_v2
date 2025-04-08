@@ -32,10 +32,11 @@ const Sobre = () => {
   return (
     <section
       id="sobre"
-      className="pt-6 pb-16 min-h-screen bg-gray-100 text-gray-800 flex flex-col items-center px-4 sm:px-12 selection:bg-gray-800 selection:text-white"
+      className="pt-20 pb-16 min-h-screen bg-gradient-to-b from-gray-900 via-gray-950 to-black
+ text-gray-200 flex flex-col items-center px-4 sm:px-12 selection:bg-gray-800 selection:text-white"
     >
       <motion.h2
-        className="text-3xl sm:text-4xl font-bold text-gray-800 mb-12 text-center font-poppins"
+        className="text-3xl sm:text-4xl font-bold text-gray-100 mb-12 text-center font-poppins"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"

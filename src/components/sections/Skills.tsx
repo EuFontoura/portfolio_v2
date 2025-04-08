@@ -1,6 +1,5 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 import {
   SiHtml5,
   SiCss3,
@@ -16,67 +15,67 @@ import {
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { RiFileExcel2Fill } from "react-icons/ri";
-import { motion } from "framer-motion";
 
 const skills = [
-  { name: "HTML", icon: <SiHtml5 className="text-orange-500" /> },
-  { name: "CSS", icon: <SiCss3 className="text-blue-500" /> },
-  { name: "React", icon: <SiReact className="text-cyan-400" /> },
-  { name: "Python", icon: <SiPython className="text-yellow-300" /> },
-  { name: "Tailwind", icon: <SiTailwindcss className="text-sky-400" /> },
-  { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
-  { name: "Bootstrap", icon: <SiBootstrap className="text-purple-500" /> },
-  { name: "Excel", icon: <RiFileExcel2Fill className="text-green-600" /> },
-  { name: "VSCode", icon: <VscVscode className="text-blue-400" /> },
-  { name: "Figma", icon: <SiFigma className="text-pink-500" /> },
-  { name: "Git", icon: <SiGit className="text-orange-600" /> },
-  { name: "GitHub", icon: <SiGithub className="text-white" /> },
-  { name: "Canva", icon: <SiCanva className="text-blue-300" /> },
+ { icon: <SiHtml5 />, name: "HTML", color: "text-orange-500" },
+  { icon: <SiCss3 />, name: "CSS", color: "text-blue-500" },
+  { icon: <SiReact />, name: "React", color: "text-cyan-400" },
+  { icon: <SiPython />, name: "Python", color: "text-yellow-300" },
+  { icon: <SiTailwindcss />, name: "Tailwind", color: "text-sky-400" },
+  { icon: <SiNodedotjs />, name: "Node.js", color: "text-green-500" },
+  { icon: <SiBootstrap />, name: "Bootstrap", color: "text-purple-500" },
+  { icon: <RiFileExcel2Fill />, name: "Excel", color: "text-green-600" },
+  { icon: <VscVscode />, name: "VSCode", color: "text-blue-400" },
+  { icon: <SiFigma />, name: "Figma", color: "text-pink-500" },
+  { icon: <SiGit />, name: "Git", color: "text-orange-600" },
+  { icon: <SiGithub />, name: "GitHub", color: "text-white" },
+  { icon: <SiCanva />, name: "Canva", color: "text-blue-300" },
 ];
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
 
 const Skills = () => {
   return (
     <section
       id="skills"
-      className="pt-6 min-h-screen bg-blue-950 text-white flex flex-col items-center px-6 sm:px-12 selection:bg-gray-900 selection:text-blue-300"
+      className="min-h-screen w-full py-6 px-6 sm:px-12 bg-gradient-to-b from-black via-gray-900 to-blue-950 text-white flex flex-col items-center"
     >
-      <div className="flex text-4xl items-center mb-10">
-        <FontAwesomeIcon icon={faCode} className="mr-3 text-white" />
-        <h2>
-          <span className="text-blue-300">Minhas </span>Skills
-        </h2>
-      </div>
+      <motion.h2
+        className="text-4xl font-bold mb-12 font-poppins text-center"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Minhas <span className="text-cyan-400">Skills</span>
+      </motion.h2>
 
-      <div className="bg-blue-900/40 rounded-3xl p-6 sm:p-10 shadow-2xl w-full max-w-5xl">
-        <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            visible: {
-              transition: {
-                staggerChildren: 0.15,
-              },
-            },
-          }}
-        >
-          {skills.map((skill) => (
-            <motion.div
-              key={skill.name}
-              variants={{
-                hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              className="flex flex-col items-center p-6 w-28 h-28 sm:w-32 sm:h-32 rounded-xl shadow-md bg-blue-900 hover:brightness-125 transition-all duration-300"
-              title={skill.name}
-            >
-              <div className="md:text-5xl text-3xl mb-2">{skill.icon}</div>
-              <span className="text-white text-xl text-center pt-2">{skill.name}</span>
-            </motion.div>
-          ))}
-        </motion.div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl w-full">
+        {skills.map((skill, i) => (
+          <motion.div
+            key={i}
+            className="bg-black/30 backdrop-blur-md rounded-xl p-6 flex flex-col items-center justify-center text-center hover:scale-105 transition-transform duration-300 border border-gray-700 hover:border-cyan-400 shadow-md shadow-cyan-500/10"
+            custom={i}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            <div className={`text-5xl mb-4 ${skill.color}`}>{skill.icon}</div>
+            <h3 className="text-xl font-semibold font-poppins">{skill.name}</h3>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
