@@ -22,6 +22,7 @@ src
 │   │   ├── BottomNavbar.tsx 
 │   │   ├── Footer.tsx 
 │   │   ├── PictureEffect.tsx 
+│   │   ├── LoadingScreen.tsx 
 │   ├── sections 
 │   │   ├── Home.tsx 
 │   │   ├── Sobre.tsx 
