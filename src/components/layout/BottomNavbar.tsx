@@ -16,13 +16,13 @@ const BottomNavbar = () => {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 w-full bg-black border-t border-gray-300 flex justify-around items-center py-3 md:hidden z-50">
+    <nav className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-300 flex justify-around items-center py-3 md:hidden z-50">
       {navItems.map(({ id, label, icon }) =>
         isProjectsPage ? (
           <RouterLink
             key={id}
             to="/"
-            className="flex flex-col items-center text-blue-500 hover:text-blue-500 text-sm"
+            className="flex flex-col items-center text-gray-600 hover:text-blue-500 text-sm"
           >
             {icon}
             <span>{label}</span>
@@ -34,7 +34,7 @@ const BottomNavbar = () => {
             smooth={true}
             duration={500}
             offset={-60}
-            className="flex flex-col items-center text-blue-500 hover:text-blue-500 text-sm"
+            className="flex flex-col items-center text-gray-600 hover:text-blue-500 text-sm"
           >
             {icon}
             <span>{label}</span>
