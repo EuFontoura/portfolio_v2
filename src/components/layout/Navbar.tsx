@@ -9,7 +9,7 @@ const Navbar = () => {
   const isProjectsPage = location.pathname === "/projetos";
 
   return (
-    <nav className="w-full text-white px-6 sm:px-10 md:px-32 shadow-[10px_5px_5px_rgba(0,0,0,0.5)] bg-black py-4 fixed top-0 left-0 z-50">
+    <nav className="w-full text-white px-6 sm:px-10 md:px-32 shadow-[10px_5px_5px_rgba(0,0,0,0.5)] bg-black py-4 fixed top-0 left-0 z-50 selection:bg-gray-400 selection:text-black">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <h1 className="text-xl font-bold">Gabriel Fontoura</h1>
 

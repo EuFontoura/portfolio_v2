@@ -38,7 +38,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="pt-6 min-h-screen bg-blue-950 text-white flex flex-col items-center px-6 sm:px-12"
+      className="pt-6 min-h-screen bg-blue-950 text-white flex flex-col items-center px-6 sm:px-12 selection:bg-gray-900 selection:text-blue-300"
     >
       <div className="flex text-4xl items-center mb-10">
         <FontAwesomeIcon icon={faCode} className="mr-3 text-white" />
