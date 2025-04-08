@@ -1,21 +1,19 @@
+// src/components/layout/Loading.tsx
 import React from "react";
-import { motion } from "framer-motion";
+import Lottie from "lottie-react";
+import loadingAnimation from "../../assets/lottie/loading.json";
 
-const LoadingScreen = () => {
+const Loading = () => {
   return (
-    <motion.div 
-      className="fixed inset-0 bg-white z-50 flex flex-col justify-center items-center"
-      initial={{ opacity: 1 }}
-      animate={{ opacity: 0 }}
-      transition={{ delay: 1.5, duration: 0.5 }}
-      exit={{ opacity: 0 }}
-    >
-      <motion.div 
-        className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"
+    <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
+      <Lottie
+        animationData={loadingAnimation}
+        loop
+        style={{ width: 200, height: 200, opacity: 1 }}
+        className="w-48 h-48"
       />
-      <span className="mt-4 text-gray-800 font-semibold">Carregando...</span>
-    </motion.div>
+    </div>
   );
 };
 
-export default LoadingScreen;
+export default Loading;
