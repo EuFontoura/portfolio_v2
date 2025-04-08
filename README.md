@@ -1,12 +1,74 @@
-# React + Vite
+# 💼 Portfólio | Gabriel Fontoura
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o meu portfólio pessoal desenvolvido com React, onde apresento meus projetos, habilidades e formas de contato. A ideia é ter uma página moderna, responsiva e que represente bem meu estilo como dev.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** + **Vite**
+- **TypeScript**
+- **TailwindCSS**
+- **Framer Motion** (animações suaves)
+- **EmailJS** (envio de mensagens pelo formulário de contato)
+- **React Scroll** (navegação com rolagem suave)
+- **Lucide Icons** (ícones minimalistas)
+- **React Router DOM**
 
-## Expanding the ESLint configuration
+## 📁 Estrutura do Projeto
+```bash
+src 
+├── componentes 
+│   ├── layout 
+│   │   ├── Navbar.tsx 
+│   │   ├── BottomNavbar.tsx 
+│   │   ├── Footer.tsx 
+│   │   ├── PictureEffect.tsx 
+│   ├── sections 
+│   │   ├── Home.tsx 
+│   │   ├── Sobre.tsx 
+│   │   ├── Skills.tsx 
+│   │   ├── Projetos.tsx 
+│   │   ├── Contato.tsx 
+│   ├── ui
+│   │   ├── Button.tsx
+│   │   ├── Icons.tsx
+├── pages 
+│   └── ProjetosPage.tsx
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+
+
+## 🌐 Funcionalidades
+
+- SPA com navegação suave por seções
+- Versão mobile com **navbar inferior fixa**
+- Formulário funcional com envio via **EmailJS**
+- Design responsivo e animado
+- Página dedicada para projetos com cards (em construção 👷)
+
+## 📦 Como rodar localmente
+
+```bash
+# Clone o repositório
+git clone https://github.com/EuFontoura/portfolio_v2.git
+
+# Acesse a pasta
+cd portfolio_v2
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npm run dev
+```
+
+## 📬 Contato
+
+Quer trocar uma ideia, chamar pra um job ou só mandar um elogio?
+
+📧 [gabrielFMendonca@gmail.com](mailto:gabrielFMendonca@gmail.com)
+
+🔗 [LinkedIn](https://linkedin.com/in/gabriel-fontoura/)
+
+🌐 [Acesse o Portfólio](gabrielfontouradev.vercel.app)
+
+Feito com 💚 por Gabriel Fontoura
