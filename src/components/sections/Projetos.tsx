@@ -23,7 +23,7 @@ const Projetos = () => {
   return (
     <section
       id="projetos"
-      className="pt-6 min-h-screen bg-gradient-to-b from-blue-950 via-gray-950 to-black text-white flex flex-col items-center px-6 sm:px-12 selection:bg-gray-400 selection:text-black"
+      className="pt-10 min-h-screen bg-gradient-to-b from-blue-950 via-gray-950 to-black text-white flex flex-col items-center px-6 sm:px-12 selection:bg-gray-400 selection:text-black"
     >
       <motion.h1
         className="text-4xl font-bold text-white mb-12 text-center font-poppins pb-2"

@@ -12,7 +12,7 @@ interface ButtonProps extends HTMLMotionProps<"button"> {
   variant?: Variant;
   size?: Size;
   className?: string;
-  animatedIcon?: boolean; // 👈 novo prop
+  animatedIcon?: boolean; // pra ativar ou desativar a setinha
 }
 
 const baseStyles =

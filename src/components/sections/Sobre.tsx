@@ -32,7 +32,7 @@ const Sobre = () => {
   return (
     <section
       id="sobre"
-      className="pt-20 pb-16 min-h-screen bg-gradient-to-b from-gray-900 via-gray-950 to-black
+      className="pt-8 md:pt-16 pb-16 min-h-screen bg-gradient-to-b from-gray-900 via-gray-950 to-black
  text-gray-200 flex flex-col items-center px-4 sm:px-12 selection:bg-gray-800 selection:text-white"
     >
       <motion.h2

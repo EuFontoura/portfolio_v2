@@ -13,7 +13,6 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <h1 className="text-xl font-bold">Gabriel Fontoura</h1>
 
-        {/* Menu Desktop */}
         <ul className="hidden md:flex space-x-6">
           {navItems.map((item) =>
             isProjectsPage ? (
@@ -29,6 +28,7 @@ const Navbar = () => {
                 key={item}
                 to={item.toLowerCase()}
                 spy={true}
+                hashSpy={true}
                 smooth={true}
                 offset={-60}
                 duration={500}

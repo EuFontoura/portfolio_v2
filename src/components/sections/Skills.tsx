@@ -49,7 +49,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen w-full py-6 px-6 sm:px-12 bg-gradient-to-b from-black via-gray-900 to-blue-950 text-white flex flex-col items-center"
+      className="md:pt-20 min-h-screen w-full py-6 px-6 sm:px-12 bg-gradient-to-b from-black via-gray-900 to-blue-950 text-white flex flex-col items-center"
     >
       <motion.h2
         className="text-4xl font-bold mb-12 font-poppins text-center"
