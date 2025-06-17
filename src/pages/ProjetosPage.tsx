@@ -15,12 +15,12 @@ const projetosMock = [
     tecnologias: ["React", "Tailwind", "Framer Motion", "EmailJS"],
   },
   {
-    titulo: "E-commerce de Produtos Naturais",
-    descricao: "Loja virtual com carrinho de compras, busca por produtos e integração com Mercado Pago.",
-    imagem: "https://source.unsplash.com/random/800x600?store",
-    link: "https://lojanatureba.com",
-    github: "https://github.com/seuusuario/ecommerce-natureba",
-    tecnologias: ["React", "Node.js", "MongoDB", "Firebase"],
+    titulo: "Gravity Ball",
+    descricao: "Um site lúdico criado com o objetivo de estudar efeitos de gravidade no JavaScript, atualmente funcionando apenas em Desktop.",
+    imagem: "/projects/gravityBall.png",
+    link: "https://gravity-ball-eight.vercel.app/",
+    github: "https://github.com/EuFontoura/GravityBall",
+    tecnologias: ["JavaScript", "CSS", "HTML"],
   },
   {
     titulo: "Blog Pessoal",
