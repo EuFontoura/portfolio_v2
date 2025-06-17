@@ -19,7 +19,7 @@ const Contact = () => {
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-
+    
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,

@@ -61,7 +61,7 @@ const Sobre = () => {
         >
           <PictureEffect
             className="w-52 h-52 sm:w-60 sm:h-60 md:w-80 md:h-80 rounded-md md:grayscale hover:grayscale-0"
-            src="https://th.bing.com/th/id/OIP.CYVMQihQDvft4xAv03jQQwHaEJ?rs=1&pid=ImgDetMain"
+            src="/images/profile-pic.jpg"
           />
         </motion.div>
 

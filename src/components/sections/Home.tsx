@@ -84,7 +84,7 @@ const Home = () => {
       >
         <PictureEffect
           className="rounded-full md:w-72 md:h-72 w-56 h-56"
-          src="https://th.bing.com/th/id/OIP.CYVMQihQDvft4xAv03jQQwHaEJ?rs=1&pid=ImgDetMain"
+          src="/images/another_profile_pic.jpg"
         />
       </motion.div>
     </section>
