@@ -34,7 +34,7 @@ const ProjetoModal = ({ isOpen, onClose, projeto }: ProjetoModalProps) => {
           exit={{ scale: 0.8 }}
           onClick={(e) => e.stopPropagation()}
         >
-          <button className="absolute top-3 right-3 text-black" onClick={onClose}>
+          <button className="absolute top-3 right-3 text-black cursor-pointer" onClick={onClose}>
             <X size={24} />
           </button>
 

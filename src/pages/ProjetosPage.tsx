@@ -8,10 +8,10 @@ import { motion } from "framer-motion";
 const projetosMock = [
   {
     titulo: "Portfólio Profissional",
-    descricao: "Site pessoal com animações suaves, dark mode e integração com EmailJS.",
-    imagem: "https://source.unsplash.com/random/800x600?portfolio",
-    link: "https://meuportfolio.com",
-    github: "https://github.com/seuusuario/portfolio",
+    descricao: "O primeiro portfolio que fiz, com animações suaves, minimalista e integração com EmailJS.",
+    imagem: "/projects/Portfolio.png",
+    link: "https://gabrielfontoura.vercel.app/",
+    github: "https://github.com/EuFontoura/Portfolio",
     tecnologias: ["React", "Tailwind", "Framer Motion", "EmailJS"],
   },
   {
