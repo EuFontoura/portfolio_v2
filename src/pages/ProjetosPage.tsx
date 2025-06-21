@@ -23,12 +23,26 @@ const projetosMock = [
     tecnologias: ["JavaScript", "CSS", "HTML"],
   },
   {
-    titulo: "Blog Pessoal",
-    descricao: "Blog com markdown, comentários e sistema de publicação via CMS headless.",
-    imagem: "https://source.unsplash.com/random/800x600?blog",
-    link: "https://meublogmaneiro.com",
-    github: "https://github.com/seuusuario/blog-pessoal",
-    tecnologias: ["Next.js", "Tailwind", "Contentful"],
+    titulo: "Awwwards Clone",
+    descricao: "Um clone da página da Zentry, ganhadora do Awwwards.",
+    imagem: "/projects/awards.jpg",
+    link: "https://awards-three-phi.vercel.app",
+    github: "https://github.com/EuFontoura/awards",
+    tecnologias: ["React", "Tailwind", "Gsap", "ScrollTrigger", "Framer Motion"],
+  },
+  {
+    titulo: "TetrisPy",
+    descricao: "Um clone do jogo Tetris. Por ter sido criado inteiramento com Python, não é possível reproduzir direto no navegador. Entretanto, bem documentado para que seja bem simples de utilizá-lo.",
+    imagem: "/projects/TetrisPy.png",
+    github: "https://github.com/EuFontoura/TetrisPy",
+    tecnologias: ["Python", "Pygame"],
+  },
+  {
+    titulo: "DefenseTowerPy",
+    descricao: "Um Defense Tower. Por ter sido criado inteiramento com Python, não é possível reproduzir direto no navegador. Entretanto, bem documentado para que seja bem simples de utilizá-lo.",
+    imagem: "/projects/DefenseTowerPy.png",
+    github: "https://github.com/EuFontoura/DefenseTowerPy",
+    tecnologias: ["Python", "Pygame"],
   },
 ];
 
