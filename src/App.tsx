@@ -10,7 +10,7 @@ import Contato from "./components/sections/Contato";
 import ProjetosPage from "./pages/ProjetosPage";
 import BottomNavbar from "./components/layout/BottomNavbar";
 import Footer from "./components/layout/Footer";
-import Loading from "./components/layout/LoadingScreen"; // novo import
+import Loading from "./components/layout/LoadingScreen";
 
 import "./App.css";
 

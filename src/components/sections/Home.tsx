@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import PictureEffect from "../layout/PictureEffect";
 import Button from "../ui/Button";
 import Icons from "../ui/Icons";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -60,7 +60,7 @@ const Home = () => {
           />
         </motion.p>
 
-        <Link to="sobre" smooth={true} duration={600} offset={-50}>
+        <Link to="sobre">
           <Button
             animatedIcon
             variant="outline"

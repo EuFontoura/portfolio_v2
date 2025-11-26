@@ -70,7 +70,7 @@ const Projetos = () => {
         </div>
 
         <img
-          src="/images/github_page.png"
+          src="/images/project_image.jpg"
           alt="Imagem Github"
           className="w-full h-[400px] sm:h-[300px] object-cover"
         />
