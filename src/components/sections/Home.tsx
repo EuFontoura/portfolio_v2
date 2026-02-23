@@ -1,16 +1,19 @@
-import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import PictureEffect from "../layout/PictureEffect";
 import Button from "../ui/Button";
 import Icons from "../ui/Icons";
 import { Link } from "react-scroll";
 
 const Home = () => {
+  const { t } = useTranslation();
+  const roles = t("home.roles", { returnObjects: true }) as string[];
+
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-gray-900 text-white pt-20 md:pt-0 px-6 sm:px-10 md:px-32 flex flex-col md:flex-row items-center justify-between gap-10 selection:bg-gray-400 selection:text-black overflow-hidden"
+      className="relative min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white pt-20 md:pt-0 px-6 sm:px-10 md:px-32 flex flex-col md:flex-row items-center justify-between gap-10 selection:bg-gray-400 selection:text-black overflow-hidden"
     >
       <div
         className="absolute inset-0 z-0 pointer-events-none"
@@ -27,30 +30,26 @@ const Home = () => {
           transition={{ duration: 0.6 }}
           className="text-3xl sm:text-4xl font-bold"
         >
-          Prazer,
+          {t("home.greeting")}
         </motion.h2>
 
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-4xl sm:text-6xl font-bold text-blue-400"
+          className="text-4xl sm:text-6xl font-bold text-blue-600 dark:text-blue-400"
         >
-          Gabriel Fontoura
+          {t("home.name")}
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.6 }}
-          className="text-lg sm:text-2xl mt-4 text-gray-300"
+          className="text-lg sm:text-2xl mt-4 text-gray-600 dark:text-gray-300"
         >
           <Typewriter
-            words={[
-              "Desenvolvedor Front-end",
-              "Desenvolvedor Back-end",
-              "Apaixonado por código",
-            ]}
+            words={roles}
             loop={true}
             cursor
             cursorStyle="_"
@@ -69,7 +68,7 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            Saiba mais
+            {t("home.cta")}
           </Button>
         </Link>
 
@@ -85,6 +84,7 @@ const Home = () => {
         <PictureEffect
           className="rounded-full md:w-72 md:h-72 w-56 h-56"
           src="/images/another_profile_pic.jpg"
+          alt="Gabriel Fontoura profile photo"
         />
       </motion.div>
     </section>

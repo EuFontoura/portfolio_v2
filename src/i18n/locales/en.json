@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hey there,",
+    "name": "Gabriel Fontoura",
+    "roles": ["Front-end Developer", "Back-end Developer", "Passionate about code"],
+    "cta": "Learn more"
+  },
+  "about": {
+    "title": "About",
+    "titleHighlight": "Me",
+    "question": "Who is Gabriel Fontoura?",
+    "role": "Full-Stack Developer",
+    "bio": "Hey! I'm Gabriel Fontoura — a full-stack developer passionate about turning ideas into code and digital experiences. I love the blend of creativity and logic, and I'm always looking for ways to make technology more human, intuitive, and functional. In my day-to-day, I always have a documentation tab open (or a coffee in hand 😅), diving into new technologies, frameworks, or techniques to improve what I deliver. I've been a programming mentor, helping people break through coding challenges and reach their goals. I carry that with me to this day — teaching and learning are part of the same journey.",
+    "email": "Email:",
+    "location": "Location:",
+    "locationValue": "Juiz de Fora - MG, Brazil"
+  },
+  "skills": {
+    "title": "My",
+    "titleHighlight": "Skills"
+  },
+  "projects": {
+    "title": "My",
+    "titleHighlight": "Projects",
+    "seeCode": "See how it's made",
+    "myProjects": "My Projects",
+    "viewProject": "View project",
+    "accessProject": "Access Project",
+    "viewOnGithub": "View on GitHub",
+    "pageTitle": "My Projects",
+    "pageSubtitle": "Check out some of my most recent work:",
+    "back": "Back"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "Your email",
+    "message": "Message",
+    "messagePlaceholder": "Your message",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Error sending message. Please try again.",
+    "directEmail": "Or send an email directly to",
+    "validationRequired": "This field is required.",
+    "validationEmail": "Please enter a valid email."
+  },
+  "experience": {
+    "title": "Professional",
+    "titleHighlight": "Experience",
+    "downloadCV": "Download CV"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to Home"
+  },
+  "theme": {
+    "toggleLight": "Light mode",
+    "toggleDark": "Dark mode"
+  }
+}

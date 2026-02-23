@@ -1,8 +1,7 @@
-import React, { ReactNode, useState } from "react";
-import { motion, HTMLMotionProps } from "framer-motion";
+import { type ReactNode, useState } from "react";
+import { motion, type HTMLMotionProps } from "framer-motion";
 import clsx from "clsx";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { ArrowDown } from "lucide-react";
 
 type Variant = "primary" | "outline" | "ghost";
 type Size = "sm" | "md" | "lg";
@@ -12,7 +11,7 @@ interface ButtonProps extends HTMLMotionProps<"button"> {
   variant?: Variant;
   size?: Size;
   className?: string;
-  animatedIcon?: boolean; // pra ativar ou desativar a setinha
+  animatedIcon?: boolean;
 }
 
 const baseStyles =
@@ -58,7 +57,7 @@ const Button = ({
           }}
           transition={{ duration: 0.5 }}
         >
-          <FontAwesomeIcon icon={faArrowDown} />
+          <ArrowDown size={16} />
         </motion.span>
       )}
     </motion.button>

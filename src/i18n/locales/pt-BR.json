@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Sobre",
+    "skills": "Skills",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "home": {
+    "greeting": "Prazer,",
+    "name": "Gabriel Fontoura",
+    "roles": ["Desenvolvedor Front-end", "Desenvolvedor Back-end", "Apaixonado por código"],
+    "cta": "Saiba mais"
+  },
+  "about": {
+    "title": "Sobre",
+    "titleHighlight": "Mim",
+    "question": "Quem é Gabriel Fontoura?",
+    "role": "Full-Stack Developer",
+    "bio": "E aí! Eu sou o Gabriel Fontoura — um dev full-stack apaixonado por transformar ideias em código e experiências digitais. Curto aquela mistura de criatividade com lógica, e tô sempre buscando maneiras de deixar a tecnologia mais humana, intuitiva e funcional. No meu dia a dia, tô sempre com alguma aba de documentação aberta (ou um café na mão 😅), mergulhando em novas tecnologias, frameworks ou técnicas pra melhorar o que entrego. Já fui mentor de programação, ajudando a galera a destravar no código e alcançar seus objetivos. Levo isso comigo até hoje — ensinar e aprender são partes do mesmo rolê.",
+    "email": "Email:",
+    "location": "Lugar:",
+    "locationValue": "Juiz de Fora - MG"
+  },
+  "skills": {
+    "title": "Minhas",
+    "titleHighlight": "Skills"
+  },
+  "projects": {
+    "title": "Meus",
+    "titleHighlight": "Projetos",
+    "seeCode": "Veja como é feito",
+    "myProjects": "Meus Projetos",
+    "viewProject": "Ver projeto",
+    "accessProject": "Acessar Projeto",
+    "viewOnGithub": "Ver no GitHub",
+    "pageTitle": "Meus Projetos",
+    "pageSubtitle": "Confira alguns dos meus trabalhos mais recentes:",
+    "back": "Voltar"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "name": "Nome",
+    "namePlaceholder": "Seu nome",
+    "email": "Email",
+    "emailPlaceholder": "Seu email",
+    "message": "Mensagem",
+    "messagePlaceholder": "Sua mensagem",
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "success": "Mensagem enviada com sucesso!",
+    "error": "Erro ao enviar a mensagem. Tente novamente.",
+    "directEmail": "Ou mande um email direto para",
+    "validationRequired": "Este campo é obrigatório.",
+    "validationEmail": "Por favor, insira um email válido."
+  },
+  "experience": {
+    "title": "Experiência",
+    "titleHighlight": "Profissional",
+    "downloadCV": "Baixar Currículo"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "description": "A página que você está procurando não existe ou foi movida.",
+    "backHome": "Voltar para Home"
+  },
+  "theme": {
+    "toggleLight": "Modo claro",
+    "toggleDark": "Modo escuro"
+  }
+}

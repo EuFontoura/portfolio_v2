@@ -1,38 +1,26 @@
-import React from "react";
-import Button from "../ui/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { Github, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i = 1) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.2,
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  }),
-};
+import { useTranslation } from "react-i18next";
+import Button from "../ui/Button";
+import { fadeInUp } from "../../utils/animations";
 
 const Projetos = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="projetos"
-      className="pt-10 min-h-screen bg-gradient-to-b from-blue-950 via-gray-950 to-black text-white flex flex-col items-center px-6 sm:px-12 selection:bg-gray-400 selection:text-black"
+      className="pt-10 min-h-screen bg-gray-100 dark:bg-gradient-to-b dark:from-blue-950 dark:via-gray-950 dark:to-black text-gray-900 dark:text-white flex flex-col items-center px-6 sm:px-12 selection:bg-gray-400 selection:text-black"
     >
       <motion.h1
-        className="text-4xl font-bold text-white mb-12 text-center font-poppins pb-2"
+        className="text-4xl font-bold mb-12 text-center font-poppins pb-2"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Meus <span className="text-indigo-400">Projetos</span>
+        {t("projects.title")} <span className="text-indigo-600 dark:text-indigo-400">{t("projects.titleHighlight")}</span>
       </motion.h1>
 
       <motion.div
@@ -49,8 +37,8 @@ const Projetos = () => {
               size="sm"
               className="w-full sm:w-auto text-white hover:text-indigo-400 cursor-pointer px-0"
             >
-              <FontAwesomeIcon icon={faGithub} className="h-6 w-6" />
-              Veja como é feito
+              <Github className="h-6 w-6" />
+              {t("projects.seeCode")}
             </Button>
           </a>
 
@@ -60,18 +48,16 @@ const Projetos = () => {
               size="sm"
               className="w-full sm:w-auto hover:text-white hover:bg-indigo-600 group cursor-pointer"
             >
-              Meus Projetos
-              <FontAwesomeIcon
-                icon={faArrowRight}
-                className="pl-2.5 transform transition-all duration-300 group-hover:translate-x-2"
-              />
+              {t("projects.myProjects")}
+              <ArrowRight className="ml-2 transform transition-all duration-300 group-hover:translate-x-2" size={18} />
             </Button>
           </Link>
         </div>
 
         <img
           src="/images/github_page.png"
-          alt="Imagem Github"
+          alt="GitHub page"
+          loading="lazy"
           className="w-full h-[400px] sm:h-[300px] object-cover"
         />
       </motion.div>

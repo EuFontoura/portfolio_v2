@@ -1,38 +1,41 @@
-import React from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { socialLinks } from "../../data/social";
+
+const iconMap = {
+  github: Github,
+  linkedin: Linkedin,
+  instagram: Instagram,
+  mail: Mail,
+} as const;
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
-    <footer className="bg-black text-white py-6 border-t border-gray-800">
-      <div className=":max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm sm:mb-0 mb-14">
-        <p className="text-gray-400">
-          &copy; {new Date().getFullYear()} Gabriel Fontoura. Todos os direitos
-          reservados.
+    <footer className="bg-gray-100 dark:bg-black text-gray-700 dark:text-white py-6 border-t border-gray-300 dark:border-gray-800">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm sm:mb-0 mb-14">
+        <p className="text-gray-500 dark:text-gray-400">
+          &copy; {new Date().getFullYear()} Gabriel Fontoura. {t("footer.rights")}
         </p>
 
         <div className="flex gap-4">
-          <a
-            href="https://github.com/EuFontoura"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-400 transition"
-          >
-            <Github size={20} />
-          </a>
-          <a
-            href="https://linkedin.com/in/gabriel-fontoura/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-400 transition"
-          >
-            <Linkedin size={20} />
-          </a>
-          <a
-            href="mailto:gabrielFMendonca@gmail.com"
-            className="hover:text-blue-400 transition"
-          >
-            <Mail size={20} />
-          </a>
+          {socialLinks
+            .filter((link) => link.icon !== "instagram")
+            .map((link) => {
+              const Icon = iconMap[link.icon];
+              return (
+                <a
+                  key={link.name}
+                  href={link.url}
+                  target={link.icon !== "mail" ? "_blank" : undefined}
+                  rel={link.icon !== "mail" ? "noopener noreferrer" : undefined}
+                  className="hover:text-blue-400 transition"
+                >
+                  <Icon size={20} />
+                </a>
+              );
+            })}
         </div>
       </div>
     </footer>

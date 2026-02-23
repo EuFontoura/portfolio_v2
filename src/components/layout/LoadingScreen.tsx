@@ -1,5 +1,3 @@
-// src/components/layout/Loading.tsx
-import React from "react";
 import Lottie from "lottie-react";
 import loadingAnimation from "../../assets/lottie/loading.json";
 

@@ -1,93 +1,133 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { Projeto } from "../../types/project";
 
 interface ProjetoModalProps {
   isOpen: boolean;
   onClose: () => void;
-  projeto: {
-    titulo: string;
-    descricao: string;
-    imagem?: string;
-    link?: string;
-    github?: string;
-    tecnologias?: string[];
-  };
+  projeto: Projeto;
 }
 
 const ProjetoModal = ({ isOpen, onClose, projeto }: ProjetoModalProps) => {
-  if (!isOpen) return null;
+  const modalRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+
+      if (e.key === "Tab" && modalRef.current) {
+        const focusable = modalRef.current.querySelectorAll<HTMLElement>(
+          'button, a, input, textarea, [tabindex]:not([tabindex="-1"])',
+        );
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last?.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first?.focus();
+        }
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "hidden";
+      modalRef.current?.querySelector<HTMLElement>("button")?.focus();
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [isOpen, onClose]);
 
   return (
     <AnimatePresence>
-      <motion.div
-        className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex justify-center items-center z-50"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        onClick={onClose}
-      >
+      {isOpen && (
         <motion.div
-          className="bg-white rounded-xl p-6 max-w-4xl w-full flex flex-col md:flex-row gap-6 text-black relative"
-          initial={{ scale: 0.8 }}
-          animate={{ scale: 1 }}
-          exit={{ scale: 0.8 }}
-          onClick={(e) => e.stopPropagation()}
+          className="fixed inset-0 bg-black/70 backdrop-blur-sm flex justify-center items-center z-50 p-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={onClose}
+          role="dialog"
+          aria-modal="true"
+          aria-label={projeto.titulo}
         >
-          <button className="absolute top-3 right-3 text-black cursor-pointer" onClick={onClose}>
-            <X size={24} />
-          </button>
+          <motion.div
+            ref={modalRef}
+            className="bg-white rounded-xl p-6 max-w-4xl w-full flex flex-col md:flex-row gap-6 text-black relative"
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0.8 }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="absolute top-3 right-3 text-black cursor-pointer hover:text-gray-600 transition-colors"
+              onClick={onClose}
+              aria-label="Close modal"
+            >
+              <X size={24} />
+            </button>
 
-          {projeto.imagem && (
-            <img
-              src={projeto.imagem}
-              alt={projeto.titulo}
-              className="w-full md:w-1/2 h-64 object-cover rounded"
-            />
-          )}
+            {projeto.imagem && (
+              <img
+                src={projeto.imagem}
+                alt={projeto.titulo}
+                loading="lazy"
+                className="w-full md:w-1/2 h-64 object-cover rounded"
+              />
+            )}
 
-          <div className="flex flex-col justify-between w-full">
-            <div>
-              <h2 className="text-2xl font-bold mb-2">{projeto.titulo}</h2>
-              <p className="text-gray-800 mb-4">{projeto.descricao}</p>
+            <div className="flex flex-col justify-between w-full">
+              <div>
+                <h2 className="text-2xl font-bold mb-2">{projeto.titulo}</h2>
+                <p className="text-gray-800 mb-4">{projeto.descricao}</p>
 
-              <div className="flex flex-wrap gap-2">
-                {projeto.tecnologias?.map((tec, idx) => (
-                  <span
-                    key={idx}
-                    className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                <div className="flex flex-wrap gap-2">
+                  {projeto.tecnologias?.map((tec, idx) => (
+                    <span
+                      key={idx}
+                      className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                    >
+                      {tec}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex gap-4 mt-6">
+                {projeto.link && (
+                  <a
+                    href={projeto.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
                   >
-                    {tec}
-                  </span>
-                ))}
+                    {t("projects.accessProject")}
+                  </a>
+                )}
+                {projeto.github && (
+                  <a
+                    href={projeto.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition"
+                  >
+                    {t("projects.viewOnGithub")}
+                  </a>
+                )}
               </div>
             </div>
-
-            <div className="flex gap-4 mt-6">
-              {projeto.link && (
-                <a
-                  href={projeto.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-                >
-                  Acessar Projeto
-                </a>
-              )}
-              {projeto.github && (
-                <a
-                  href={projeto.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition"
-                >
-                  Ver no GitHub
-                </a>
-              )}
-            </div>
-          </div>
+          </motion.div>
         </motion.div>
-      </motion.div>
+      )}
     </AnimatePresence>
   );
 };
