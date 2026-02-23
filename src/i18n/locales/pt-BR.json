@@ -9,15 +9,15 @@
   "home": {
     "greeting": "Prazer,",
     "name": "Gabriel Fontoura",
-    "roles": ["Desenvolvedor Front-end", "Desenvolvedor Back-end", "Apaixonado por código"],
+    "roles": ["Desenvolvedor Frontend", "React & Next.js", "Apaixonado por código"],
     "cta": "Saiba mais"
   },
   "about": {
     "title": "Sobre",
     "titleHighlight": "Mim",
     "question": "Quem é Gabriel Fontoura?",
-    "role": "Full-Stack Developer",
-    "bio": "E aí! Eu sou o Gabriel Fontoura — um dev full-stack apaixonado por transformar ideias em código e experiências digitais. Curto aquela mistura de criatividade com lógica, e tô sempre buscando maneiras de deixar a tecnologia mais humana, intuitiva e funcional. No meu dia a dia, tô sempre com alguma aba de documentação aberta (ou um café na mão 😅), mergulhando em novas tecnologias, frameworks ou técnicas pra melhorar o que entrego. Já fui mentor de programação, ajudando a galera a destravar no código e alcançar seus objetivos. Levo isso comigo até hoje — ensinar e aprender são partes do mesmo rolê.",
+    "role": "Frontend Developer",
+    "bio": "E aí! Eu sou o Gabriel Fontoura — um dev frontend com mais de 3 anos de experiência, apaixonado por transformar ideias em código e experiências digitais. Trabalho com TypeScript, React, Next.js e todo o ecossistema JavaScript moderno. Minha trajetória inclui atuação em ambientes corporativos de TI e mentoria de programação, onde ajudei a galera a destravar no código e alcançar seus objetivos. No meu dia a dia, tô sempre com alguma aba de documentação aberta (ou um café na mão 😅), mergulhando em novas tecnologias e frameworks pra melhorar o que entrego. Ensinar e aprender são partes do mesmo rolê.",
     "email": "Email:",
     "location": "Lugar:",
     "locationValue": "Juiz de Fora - MG"

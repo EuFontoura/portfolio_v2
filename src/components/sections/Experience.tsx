@@ -4,35 +4,55 @@ import { useTranslation } from "react-i18next";
 import { fadeInUp } from "../../utils/animations";
 
 interface TimelineItem {
-  year: string;
+  period: string;
   title: string;
   company: string;
   description: string;
+  skills?: string[];
   type: "work" | "education";
 }
 
 const timelineData: TimelineItem[] = [
   {
-    year: "2024",
-    title: "Desenvolvedor Full-Stack",
-    company: "Freelancer",
+    period: "02/2025 - Presente",
+    title: "Bacharelado em Análise e Desenvolvimento de Sistemas",
+    company: "Uninter (EAD)",
     description:
-      "Desenvolvimento de aplicações web completas com React, Node.js e tecnologias modernas.",
-    type: "work",
+      "Graduação com foco em desenvolvimento de software, arquitetura de sistemas e fundamentos de computação.",
+    type: "education",
   },
   {
-    year: "2024",
+    period: "01/2024 - 09/2024",
     title: "Mentor de Programação",
-    company: "Estágio",
+    company: "CodiAcademy",
     description:
-      "Mentoria para iniciantes em programação, ajudando a destravar no código e alcançar objetivos.",
+      "Mentorei estudantes em HTML, CSS, JavaScript, React, Python e frameworks como Tailwind CSS e Pandas. Criei aulas interativas e coordenei equipes de projetos, promovendo aprendizado prático e colaboração.",
+    skills: ["React", "JavaScript", "Python", "Tailwind CSS", "Mentoria"],
     type: "work",
   },
   {
-    year: "2025",
-    title: "Análise e Desenvolvimento de Sistemas",
-    company: "Uninter",
-    description: "Graduação em Análise e Desenvolvimento de Sistemas com foco em desenvolvimento de software.",
+    period: "10/2023 - 09/2024",
+    title: "Curso de Programação Fullstack",
+    company: "CodiAcademy (Remoto)",
+    description:
+      "Formação completa em desenvolvimento web fullstack com foco em React, Node.js e tecnologias modernas.",
+    type: "education",
+  },
+  {
+    period: "06/2021 - 04/2023",
+    title: "Assistente de Data Center",
+    company: "Centro de Processamento de Dados da Leitura",
+    description:
+      "Atuei em rotinas operacionais do setor de TI, com foco em processos internos, controle de estoque, emissão de notas fiscais, precificação e suporte ao e-commerce. Automatizei relatórios utilizando Excel avançado.",
+    skills: ["Excel Avançado", "Automação", "E-commerce", "Controle de Estoque"],
+    type: "work",
+  },
+  {
+    period: "10/2020 - 10/2021",
+    title: "Curso de Manutenção de Computadores",
+    company: "Cebrac",
+    description:
+      "Formação em hardware, manutenção preventiva e corretiva de computadores.",
     type: "education",
   },
 ];
@@ -88,7 +108,7 @@ const Experience = () => {
               }`}
             >
               <span className="text-sm font-semibold text-blue-600 dark:text-cyan-400">
-                {item.year}
+                {item.period}
               </span>
               <h3 className="text-xl font-bold mt-1">{item.title}</h3>
               <p className="text-gray-500 dark:text-gray-400 flex items-center gap-2 mt-1">
@@ -96,6 +116,18 @@ const Experience = () => {
                 {item.company}
               </p>
               <p className="mt-2 text-gray-700 dark:text-gray-300">{item.description}</p>
+              {item.skills && (
+                <div className="flex flex-wrap gap-1.5 mt-3">
+                  {item.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="text-xs px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           </motion.div>
         ))}

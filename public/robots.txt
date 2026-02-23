@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gabrielfontoura.vercel.app/sitemap.xml
+Sitemap: https://gabrielfontouradev.vercel.app/sitemap.xml

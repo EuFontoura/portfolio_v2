@@ -1,36 +1,35 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import {
-  SiHtml5,
-  SiCss3,
+  SiTypescript,
+  SiJavascript,
   SiReact,
+  SiNextdotjs,
   SiPython,
   SiTailwindcss,
   SiNodedotjs,
   SiBootstrap,
-  SiFigma,
   SiGit,
   SiGithub,
-  SiCanva,
+  SiLinux,
+  SiFigma,
 } from "react-icons/si";
-import { VscVscode } from "react-icons/vsc";
-import { RiFileExcel2Fill } from "react-icons/ri";
 import { fadeInUp } from "../../utils/animations";
 
 const skills = [
-  { icon: <SiHtml5 />, name: "HTML", color: "text-orange-500" },
-  { icon: <SiCss3 />, name: "CSS", color: "text-blue-500" },
+  { icon: <SiTypescript />, name: "TypeScript", color: "text-blue-600" },
+  { icon: <SiJavascript />, name: "JavaScript", color: "text-yellow-400" },
   { icon: <SiReact />, name: "React", color: "text-cyan-400" },
+  { icon: <SiNextdotjs />, name: "Next.js", color: "text-gray-800 dark:text-white" },
+  { icon: <SiReact />, name: "React Native", color: "text-cyan-300" },
   { icon: <SiPython />, name: "Python", color: "text-yellow-300" },
   { icon: <SiTailwindcss />, name: "Tailwind", color: "text-sky-400" },
   { icon: <SiNodedotjs />, name: "Node.js", color: "text-green-500" },
   { icon: <SiBootstrap />, name: "Bootstrap", color: "text-purple-500" },
-  { icon: <RiFileExcel2Fill />, name: "Excel", color: "text-green-600" },
-  { icon: <VscVscode />, name: "VSCode", color: "text-blue-400" },
-  { icon: <SiFigma />, name: "Figma", color: "text-pink-500" },
   { icon: <SiGit />, name: "Git", color: "text-orange-600" },
   { icon: <SiGithub />, name: "GitHub", color: "text-gray-800 dark:text-white" },
-  { icon: <SiCanva />, name: "Canva", color: "text-blue-300" },
+  { icon: <SiLinux />, name: "Linux", color: "text-yellow-500" },
+  { icon: <SiFigma />, name: "Figma", color: "text-pink-500" },
 ];
 
 const Skills = () => {
@@ -48,7 +47,8 @@ const Skills = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        {t("skills.title")} <span className="text-cyan-600 dark:text-cyan-400">{t("skills.titleHighlight")}</span>
+        {t("skills.title")}{" "}
+        <span className="text-cyan-600 dark:text-cyan-400">{t("skills.titleHighlight")}</span>
       </motion.h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl w-full">

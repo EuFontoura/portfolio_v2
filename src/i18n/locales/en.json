@@ -9,15 +9,15 @@
   "home": {
     "greeting": "Hey there,",
     "name": "Gabriel Fontoura",
-    "roles": ["Front-end Developer", "Back-end Developer", "Passionate about code"],
+    "roles": ["Frontend Developer", "React & Next.js", "Passionate about code"],
     "cta": "Learn more"
   },
   "about": {
     "title": "About",
     "titleHighlight": "Me",
     "question": "Who is Gabriel Fontoura?",
-    "role": "Full-Stack Developer",
-    "bio": "Hey! I'm Gabriel Fontoura — a full-stack developer passionate about turning ideas into code and digital experiences. I love the blend of creativity and logic, and I'm always looking for ways to make technology more human, intuitive, and functional. In my day-to-day, I always have a documentation tab open (or a coffee in hand 😅), diving into new technologies, frameworks, or techniques to improve what I deliver. I've been a programming mentor, helping people break through coding challenges and reach their goals. I carry that with me to this day — teaching and learning are part of the same journey.",
+    "role": "Frontend Developer",
+    "bio": "Hey! I'm Gabriel Fontoura — a frontend developer with 3+ years of experience, passionate about turning ideas into code and digital experiences. I work with TypeScript, React, Next.js and the modern JavaScript ecosystem. My journey includes working in corporate IT environments and programming mentoring, where I helped people break through coding challenges and reach their goals. In my day-to-day, I always have a documentation tab open (or a coffee in hand 😅), diving into new technologies and frameworks to improve what I deliver. Teaching and learning are part of the same journey.",
     "email": "Email:",
     "location": "Location:",
     "locationValue": "Juiz de Fora - MG, Brazil"
