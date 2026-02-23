@@ -1,75 +1,88 @@
 # 💼 Portfólio | Gabriel Fontoura
 
-Este é o meu portfólio pessoal desenvolvido com React, onde apresento meus projetos, habilidades e formas de contato. A ideia é ter uma página moderna, responsiva e que represente bem meu estilo como dev.
+Portfólio pessoal de desenvolvedor frontend, construído com React 19, TypeScript e Tailwind CSS 4. Apresenta projetos, habilidades, experiência profissional e formulário de contato.
 
-## 🚀 Tecnologias Utilizadas
+🌐 **[gabrielfontouradev.vercel.app](https://gabrielfontouradev.vercel.app)**
 
-- **React** + **Vite**
-- **TypeScript**
-- **TailwindCSS**
-- **Framer Motion** (animações suaves)
-- **EmailJS** (envio de mensagens pelo formulário de contato)
-- **React Scroll** (navegação com rolagem suave)
-- **Lucide Icons** (ícones minimalistas)
-- **React Router DOM**
+## 🚀 Tech Stack
 
-## 📁 Estrutura do Projeto
-```bash
-src 
-├── componentes 
-│   ├── layout 
-│   │   ├── Navbar.tsx 
-│   │   ├── BottomNavbar.tsx 
-│   │   ├── Footer.tsx 
-│   │   ├── PictureEffect.tsx 
-│   │   ├── LoadingScreen.tsx 
-│   ├── sections 
-│   │   ├── Home.tsx 
-│   │   ├── Sobre.tsx 
-│   │   ├── Skills.tsx 
-│   │   ├── Projetos.tsx 
-│   │   ├── Contato.tsx 
-│   ├── ui
-│   │   ├── Button.tsx
-│   │   ├── Icons.tsx
-├── pages 
-│   └── ProjetosPage.tsx
+| Categoria | Tecnologias |
+|-----------|-------------|
+| **Core** | React 19, TypeScript, Vite 6 |
+| **Estilização** | Tailwind CSS 4, clsx, tailwind-merge |
+| **Animações** | Framer Motion, Lottie, react-simple-typewriter |
+| **Roteamento** | React Router DOM 7, React Scroll |
+| **i18n** | i18next, react-i18next (PT-BR / EN) |
+| **Ícones** | Lucide React, React Icons (brand logos) |
+| **Contato** | EmailJS |
+| **Linting** | ESLint, Prettier, TypeScript strict mode |
+
+## 📁 Estrutura
 
 ```
+src/
+├── app/                  # Entry point (App.tsx, App.css, main.tsx)
+├── components/
+│   ├── layout/           # Navbar, BottomNavbar, Footer, LoadingScreen, PictureEffect
+│   ├── sections/         # Home, Sobre, Skills, Experience, Projetos, Contato
+│   └── ui/               # Button, Icons, LineFade, ProjectCard, ProjectModal, BackToTop
+├── contexts/             # ThemeContext (dark/light mode)
+├── data/                 # projects.ts, social.ts
+├── hooks/
+├── i18n/                 # Configuração + locales (pt-BR.json, en.json)
+├── pages/                # ProjetosPage, NotFound (404)
+├── types/                # project.ts, lottie.d.ts
+└── utils/                # animations.ts
+```
 
+## ✨ Funcionalidades
 
-## 🌐 Funcionalidades
+- **SPA** com navegação suave por seções (react-scroll)
+- **Navbar responsiva** — auto-hide no scroll down em mobile, sempre visível em desktop
+- **Bottom navbar** com indicador de seção ativa (mobile)
+- **Dark / Light mode** com persistência em localStorage
+- **Internacionalização** — PT-BR e Inglês com troca dinâmica
+- **Formulário de contato** funcional via EmailJS
+- **Página de projetos** com modal detalhado (focus trap, Escape para fechar)
+- **Timeline de experiência** com dados reais do currículo + download de CV
+- **Efeito 3D na foto** com perspectiva via mouse (sem re-renders — DOM direto)
+- **Animações** de entrada por seção com Framer Motion
+- **Back to top** flutuante
+- **404** com redirecionamento
+- **SEO** — meta tags, Open Graph, robots.txt, sitemap.xml
+- **Acessibilidade** — skip-to-content, aria-labels, validação de formulário por campo
 
-- SPA com navegação suave por seções
-- Versão mobile com **navbar inferior fixa**
-- Formulário funcional com envio via **EmailJS**
-- Design responsivo e animado
-- Página dedicada para projetos com cards (em construção 👷)
-
-## 📦 Como rodar localmente
+## 📦 Como rodar
 
 ```bash
-# Clone o repositório
 git clone https://github.com/EuFontoura/portfolio_v2.git
-
-# Acesse a pasta
 cd portfolio_v2
-
-# Instale as dependências
 npm install
-
-# Rode o projeto
 npm run dev
 ```
 
+### Variáveis de ambiente
+
+Crie um `.env` na raiz com:
+
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+### Scripts
+
+| Comando | Descrição |
+|---------|-----------|
+| `npm run dev` | Servidor de desenvolvimento |
+| `npm run build` | Build de produção |
+| `npm run preview` | Preview do build |
+| `npm run lint` | ESLint |
+| `npx tsc --noEmit` | Type check |
+
 ## 📬 Contato
 
-Quer trocar uma ideia, chamar pra um job ou só mandar um elogio?
-
-📧 [gabrielFMendonca@gmail.com](mailto:gabrielFMendonca@gmail.com)
-
-🔗 [LinkedIn](https://linkedin.com/in/gabriel-fontoura/)
-
-🌐 [Acesse o Portfólio](https://gabrielfontouradev.vercel.app)
+📧 [gabrielFMendonca@gmail.com](mailto:gabrielFMendonca@gmail.com) · 🔗 [LinkedIn](https://linkedin.com/in/gabriel-fontoura/) · 🐙 [GitHub](https://github.com/EuFontoura)
 
 Feito com 💚 por Gabriel Fontoura
